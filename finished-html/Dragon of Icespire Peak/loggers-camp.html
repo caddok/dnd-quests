@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+    <html>
+    <head>
+        <meta charset="UTF-8">
+        <title>1&period; NPCs</title>
+        <style>
+/* From extension vscode.github */
+/*---------------------------------------------------------------------------------------------
+ *  Copyright (c) Microsoft Corporation. All rights reserved.
+ *  Licensed under the MIT License. See License.txt in the project root for license information.
+ *--------------------------------------------------------------------------------------------*/
+
+.vscode-dark img[src$=\#gh-light-mode-only],
+.vscode-light img[src$=\#gh-dark-mode-only] {
+	display: none;
+}
+
+/* From extension vscode.markdown-math */
+@font-face{font-family:KaTeX_AMS;font-style:normal;font-weight:400;src:url(fonts/KaTeX_AMS-Regular.woff2) format("woff2"),url(fonts/KaTeX_AMS-Regular.woff) format("woff"),url(fonts/KaTeX_AMS-Regular.ttf) format("truetype")}@font-face{font-family:KaTeX_Caligraphic;font-style:normal;font-weight:700;src:url(fonts/KaTeX_Caligraphic-Bold.woff2) format("woff2"),url(fonts/KaTeX_Caligraphic-Bold.woff) format("woff"),url(fonts/KaTeX_Caligraphic-Bold.ttf) format("truetype")}@font-face{font-family:KaTeX_Caligraphic;font-style:normal;font-weight:400;src:url(fonts/KaTeX_Caligraphic-Regular.woff2) format("woff2"),url(fonts/KaTeX_Caligraphic-Regular.woff) format("woff"),url(fonts/KaTeX_Caligraphic-Regular.ttf) format("truetype")}@font-face{font-family:KaTeX_Fraktur;font-style:normal;font-weight:700;src:url(fonts/KaTeX_Fraktur-Bold.woff2) format("woff2"),url(fonts/KaTeX_Fraktur-Bold.woff) format("woff"),url(fonts/KaTeX_Fraktur-Bold.ttf) format("truetype")}@font-face{font-family:KaTeX_Fraktur;font-style:normal;font-weight:400;src:url(fonts/KaTeX_Fraktur-Regular.woff2) format("woff2"),url(fonts/KaTeX_Fraktur-Regular.woff) format("woff"),url(fonts/KaTeX_Fraktur-Regular.ttf) format("truetype")}@font-face{font-family:KaTeX_Main;font-style:normal;font-weight:700;src:url(fonts/KaTeX_Main-Bold.woff2) format("woff2"),url(fonts/KaTeX_Main-Bold.woff) format("woff"),url(fonts/KaTeX_Main-Bold.ttf) format("truetype")}@font-face{font-family:KaTeX_Main;font-style:italic;font-weight:700;src:url(fonts/KaTeX_Main-BoldItalic.woff2) format("woff2"),url(fonts/KaTeX_Main-BoldItalic.woff) format("woff"),url(fonts/KaTeX_Main-BoldItalic.ttf) format("truetype")}@font-face{font-family:KaTeX_Main;font-style:italic;font-weight:400;src:url(fonts/KaTeX_Main-Italic.woff2) format("woff2"),url(fonts/KaTeX_Main-Italic.woff) format("woff"),url(fonts/KaTeX_Main-Italic.ttf) format("truetype")}@font-face{font-family:KaTeX_Main;font-style:normal;font-weight:400;src:url(fonts/KaTeX_Main-Regular.woff2) format("woff2"),url(fonts/KaTeX_Main-Regular.woff) format("woff"),url(fonts/KaTeX_Main-Regular.ttf) format("truetype")}@font-face{font-family:KaTeX_Math;font-style:italic;font-weight:700;src:url(fonts/KaTeX_Math-BoldItalic.woff2) format("woff2"),url(fonts/KaTeX_Math-BoldItalic.woff) format("woff"),url(fonts/KaTeX_Math-BoldItalic.ttf) format("truetype")}@font-face{font-family:KaTeX_Math;font-style:italic;font-weight:400;src:url(fonts/KaTeX_Math-Italic.woff2) format("woff2"),url(fonts/KaTeX_Math-Italic.woff) format("woff"),url(fonts/KaTeX_Math-Italic.ttf) format("truetype")}@font-face{font-family:"KaTeX_SansSerif";font-style:normal;font-weight:700;src:url(fonts/KaTeX_SansSerif-Bold.woff2) format("woff2"),url(fonts/KaTeX_SansSerif-Bold.woff) format("woff"),url(fonts/KaTeX_SansSerif-Bold.ttf) format("truetype")}@font-face{font-family:"KaTeX_SansSerif";font-style:italic;font-weight:400;src:url(fonts/KaTeX_SansSerif-Italic.woff2) format("woff2"),url(fonts/KaTeX_SansSerif-Italic.woff) format("woff"),url(fonts/KaTeX_SansSerif-Italic.ttf) format("truetype")}@font-face{font-family:"KaTeX_SansSerif";font-style:normal;font-weight:400;src:url(fonts/KaTeX_SansSerif-Regular.woff2) format("woff2"),url(fonts/KaTeX_SansSerif-Regular.woff) format("woff"),url(fonts/KaTeX_SansSerif-Regular.ttf) format("truetype")}@font-face{font-family:KaTeX_Script;font-style:normal;font-weight:400;src:url(fonts/KaTeX_Script-Regular.woff2) format("woff2"),url(fonts/KaTeX_Script-Regular.woff) format("woff"),url(fonts/KaTeX_Script-Regular.ttf) format("truetype")}@font-face{font-family:KaTeX_Size1;font-style:normal;font-weight:400;src:url(fonts/KaTeX_Size1-Regular.woff2) format("woff2"),url(fonts/KaTeX_Size1-Regular.woff) format("woff"),url(fonts/KaTeX_Size1-Regular.ttf) format("truetype")}@font-face{font-family:KaTeX_Size2;font-style:normal;font-weight:400;src:url(fonts/KaTeX_Size2-Regular.woff2) format("woff2"),url(fonts/KaTeX_Size2-Regular.woff) format("woff"),url(fonts/KaTeX_Size2-Regular.ttf) format("truetype")}@font-face{font-family:KaTeX_Size3;font-style:normal;font-weight:400;src:url(fonts/KaTeX_Size3-Regular.woff2) format("woff2"),url(fonts/KaTeX_Size3-Regular.woff) format("woff"),url(fonts/KaTeX_Size3-Regular.ttf) format("truetype")}@font-face{font-family:KaTeX_Size4;font-style:normal;font-weight:400;src:url(fonts/KaTeX_Size4-Regular.woff2) format("woff2"),url(fonts/KaTeX_Size4-Regular.woff) format("woff"),url(fonts/KaTeX_Size4-Regular.ttf) format("truetype")}@font-face{font-family:KaTeX_Typewriter;font-style:normal;font-weight:400;src:url(fonts/KaTeX_Typewriter-Regular.woff2) format("woff2"),url(fonts/KaTeX_Typewriter-Regular.woff) format("woff"),url(fonts/KaTeX_Typewriter-Regular.ttf) format("truetype")}.katex{text-rendering:auto;font:normal 1.21em KaTeX_Main,Times New Roman,serif;line-height:1.2;text-indent:0}.katex *{-ms-high-contrast-adjust:none!important;border-color:currentColor}.katex .katex-version:after{content:"0.13.24"}.katex .katex-mathml{clip:rect(1px,1px,1px,1px);border:0;height:1px;overflow:hidden;padding:0;position:absolute;width:1px}.katex .katex-html>.newline{display:block}.katex .base{position:relative;white-space:nowrap;width:-webkit-min-content;width:-moz-min-content;width:min-content}.katex .base,.katex .strut{display:inline-block}.katex .textbf{font-weight:700}.katex .textit{font-style:italic}.katex .textrm{font-family:KaTeX_Main}.katex .textsf{font-family:KaTeX_SansSerif}.katex .texttt{font-family:KaTeX_Typewriter}.katex .mathnormal{font-family:KaTeX_Math;font-style:italic}.katex .mathit{font-family:KaTeX_Main;font-style:italic}.katex .mathrm{font-style:normal}.katex .mathbf{font-family:KaTeX_Main;font-weight:700}.katex .boldsymbol{font-family:KaTeX_Math;font-style:italic;font-weight:700}.katex .amsrm,.katex .mathbb,.katex .textbb{font-family:KaTeX_AMS}.katex .mathcal{font-family:KaTeX_Caligraphic}.katex .mathfrak,.katex .textfrak{font-family:KaTeX_Fraktur}.katex .mathtt{font-family:KaTeX_Typewriter}.katex .mathscr,.katex .textscr{font-family:KaTeX_Script}.katex .mathsf,.katex .textsf{font-family:KaTeX_SansSerif}.katex .mathboldsf,.katex .textboldsf{font-family:KaTeX_SansSerif;font-weight:700}.katex .mathitsf,.katex .textitsf{font-family:KaTeX_SansSerif;font-style:italic}.katex .mainrm{font-family:KaTeX_Main;font-style:normal}.katex .vlist-t{border-collapse:collapse;display:inline-table;table-layout:fixed}.katex .vlist-r{display:table-row}.katex .vlist{display:table-cell;position:relative;vertical-align:bottom}.katex .vlist>span{display:block;height:0;position:relative}.katex .vlist>span>span{display:inline-block}.katex .vlist>span>.pstrut{overflow:hidden;width:0}.katex .vlist-t2{margin-right:-2px}.katex .vlist-s{display:table-cell;font-size:1px;min-width:2px;vertical-align:bottom;width:2px}.katex .vbox{align-items:baseline;display:inline-flex;flex-direction:column}.katex .hbox{width:100%}.katex .hbox,.katex .thinbox{display:inline-flex;flex-direction:row}.katex .thinbox{max-width:0;width:0}.katex .msupsub{text-align:left}.katex .mfrac>span>span{text-align:center}.katex .mfrac .frac-line{border-bottom-style:solid;display:inline-block;width:100%}.katex .hdashline,.katex .hline,.katex .mfrac .frac-line,.katex .overline .overline-line,.katex .rule,.katex .underline .underline-line{min-height:1px}.katex .mspace{display:inline-block}.katex .clap,.katex .llap,.katex .rlap{position:relative;width:0}.katex .clap>.inner,.katex .llap>.inner,.katex .rlap>.inner{position:absolute}.katex .clap>.fix,.katex .llap>.fix,.katex .rlap>.fix{display:inline-block}.katex .llap>.inner{right:0}.katex .clap>.inner,.katex .rlap>.inner{left:0}.katex .clap>.inner>span{margin-left:-50%;margin-right:50%}.katex .rule{border:0 solid;display:inline-block;position:relative}.katex .hline,.katex .overline .overline-line,.katex .underline .underline-line{border-bottom-style:solid;display:inline-block;width:100%}.katex .hdashline{border-bottom-style:dashed;display:inline-block;width:100%}.katex .sqrt>.root{margin-left:.27777778em;margin-right:-.55555556em}.katex .fontsize-ensurer.reset-size1.size1,.katex .sizing.reset-size1.size1{font-size:1em}.katex .fontsize-ensurer.reset-size1.size2,.katex .sizing.reset-size1.size2{font-size:1.2em}.katex .fontsize-ensurer.reset-size1.size3,.katex .sizing.reset-size1.size3{font-size:1.4em}.katex .fontsize-ensurer.reset-size1.size4,.katex .sizing.reset-size1.size4{font-size:1.6em}.katex .fontsize-ensurer.reset-size1.size5,.katex .sizing.reset-size1.size5{font-size:1.8em}.katex .fontsize-ensurer.reset-size1.size6,.katex .sizing.reset-size1.size6{font-size:2em}.katex .fontsize-ensurer.reset-size1.size7,.katex .sizing.reset-size1.size7{font-size:2.4em}.katex .fontsize-ensurer.reset-size1.size8,.katex .sizing.reset-size1.size8{font-size:2.88em}.katex .fontsize-ensurer.reset-size1.size9,.katex .sizing.reset-size1.size9{font-size:3.456em}.katex .fontsize-ensurer.reset-size1.size10,.katex .sizing.reset-size1.size10{font-size:4.148em}.katex .fontsize-ensurer.reset-size1.size11,.katex .sizing.reset-size1.size11{font-size:4.976em}.katex .fontsize-ensurer.reset-size2.size1,.katex .sizing.reset-size2.size1{font-size:.83333333em}.katex .fontsize-ensurer.reset-size2.size2,.katex .sizing.reset-size2.size2{font-size:1em}.katex .fontsize-ensurer.reset-size2.size3,.katex .sizing.reset-size2.size3{font-size:1.16666667em}.katex .fontsize-ensurer.reset-size2.size4,.katex .sizing.reset-size2.size4{font-size:1.33333333em}.katex .fontsize-ensurer.reset-size2.size5,.katex .sizing.reset-size2.size5{font-size:1.5em}.katex .fontsize-ensurer.reset-size2.size6,.katex .sizing.reset-size2.size6{font-size:1.66666667em}.katex .fontsize-ensurer.reset-size2.size7,.katex .sizing.reset-size2.size7{font-size:2em}.katex .fontsize-ensurer.reset-size2.size8,.katex .sizing.reset-size2.size8{font-size:2.4em}.katex .fontsize-ensurer.reset-size2.size9,.katex .sizing.reset-size2.size9{font-size:2.88em}.katex .fontsize-ensurer.reset-size2.size10,.katex .sizing.reset-size2.size10{font-size:3.45666667em}.katex .fontsize-ensurer.reset-size2.size11,.katex .sizing.reset-size2.size11{font-size:4.14666667em}.katex .fontsize-ensurer.reset-size3.size1,.katex .sizing.reset-size3.size1{font-size:.71428571em}.katex .fontsize-ensurer.reset-size3.size2,.katex .sizing.reset-size3.size2{font-size:.85714286em}.katex .fontsize-ensurer.reset-size3.size3,.katex .sizing.reset-size3.size3{font-size:1em}.katex .fontsize-ensurer.reset-size3.size4,.katex .sizing.reset-size3.size4{font-size:1.14285714em}.katex .fontsize-ensurer.reset-size3.size5,.katex .sizing.reset-size3.size5{font-size:1.28571429em}.katex .fontsize-ensurer.reset-size3.size6,.katex .sizing.reset-size3.size6{font-size:1.42857143em}.katex .fontsize-ensurer.reset-size3.size7,.katex .sizing.reset-size3.size7{font-size:1.71428571em}.katex .fontsize-ensurer.reset-size3.size8,.katex .sizing.reset-size3.size8{font-size:2.05714286em}.katex .fontsize-ensurer.reset-size3.size9,.katex .sizing.reset-size3.size9{font-size:2.46857143em}.katex .fontsize-ensurer.reset-size3.size10,.katex .sizing.reset-size3.size10{font-size:2.96285714em}.katex .fontsize-ensurer.reset-size3.size11,.katex .sizing.reset-size3.size11{font-size:3.55428571em}.katex .fontsize-ensurer.reset-size4.size1,.katex .sizing.reset-size4.size1{font-size:.625em}.katex .fontsize-ensurer.reset-size4.size2,.katex .sizing.reset-size4.size2{font-size:.75em}.katex .fontsize-ensurer.reset-size4.size3,.katex .sizing.reset-size4.size3{font-size:.875em}.katex .fontsize-ensurer.reset-size4.size4,.katex .sizing.reset-size4.size4{font-size:1em}.katex .fontsize-ensurer.reset-size4.size5,.katex .sizing.reset-size4.size5{font-size:1.125em}.katex .fontsize-ensurer.reset-size4.size6,.katex .sizing.reset-size4.size6{font-size:1.25em}.katex .fontsize-ensurer.reset-size4.size7,.katex .sizing.reset-size4.size7{font-size:1.5em}.katex .fontsize-ensurer.reset-size4.size8,.katex .sizing.reset-size4.size8{font-size:1.8em}.katex .fontsize-ensurer.reset-size4.size9,.katex .sizing.reset-size4.size9{font-size:2.16em}.katex .fontsize-ensurer.reset-size4.size10,.katex .sizing.reset-size4.size10{font-size:2.5925em}.katex .fontsize-ensurer.reset-size4.size11,.katex .sizing.reset-size4.size11{font-size:3.11em}.katex .fontsize-ensurer.reset-size5.size1,.katex .sizing.reset-size5.size1{font-size:.55555556em}.katex .fontsize-ensurer.reset-size5.size2,.katex .sizing.reset-size5.size2{font-size:.66666667em}.katex .fontsize-ensurer.reset-size5.size3,.katex .sizing.reset-size5.size3{font-size:.77777778em}.katex .fontsize-ensurer.reset-size5.size4,.katex .sizing.reset-size5.size4{font-size:.88888889em}.katex .fontsize-ensurer.reset-size5.size5,.katex .sizing.reset-size5.size5{font-size:1em}.katex .fontsize-ensurer.reset-size5.size6,.katex .sizing.reset-size5.size6{font-size:1.11111111em}.katex .fontsize-ensurer.reset-size5.size7,.katex .sizing.reset-size5.size7{font-size:1.33333333em}.katex .fontsize-ensurer.reset-size5.size8,.katex .sizing.reset-size5.size8{font-size:1.6em}.katex .fontsize-ensurer.reset-size5.size9,.katex .sizing.reset-size5.size9{font-size:1.92em}.katex .fontsize-ensurer.reset-size5.size10,.katex .sizing.reset-size5.size10{font-size:2.30444444em}.katex .fontsize-ensurer.reset-size5.size11,.katex .sizing.reset-size5.size11{font-size:2.76444444em}.katex .fontsize-ensurer.reset-size6.size1,.katex .sizing.reset-size6.size1{font-size:.5em}.katex .fontsize-ensurer.reset-size6.size2,.katex .sizing.reset-size6.size2{font-size:.6em}.katex .fontsize-ensurer.reset-size6.size3,.katex .sizing.reset-size6.size3{font-size:.7em}.katex .fontsize-ensurer.reset-size6.size4,.katex .sizing.reset-size6.size4{font-size:.8em}.katex .fontsize-ensurer.reset-size6.size5,.katex .sizing.reset-size6.size5{font-size:.9em}.katex .fontsize-ensurer.reset-size6.size6,.katex .sizing.reset-size6.size6{font-size:1em}.katex .fontsize-ensurer.reset-size6.size7,.katex .sizing.reset-size6.size7{font-size:1.2em}.katex .fontsize-ensurer.reset-size6.size8,.katex .sizing.reset-size6.size8{font-size:1.44em}.katex .fontsize-ensurer.reset-size6.size9,.katex .sizing.reset-size6.size9{font-size:1.728em}.katex .fontsize-ensurer.reset-size6.size10,.katex .sizing.reset-size6.size10{font-size:2.074em}.katex .fontsize-ensurer.reset-size6.size11,.katex .sizing.reset-size6.size11{font-size:2.488em}.katex .fontsize-ensurer.reset-size7.size1,.katex .sizing.reset-size7.size1{font-size:.41666667em}.katex .fontsize-ensurer.reset-size7.size2,.katex .sizing.reset-size7.size2{font-size:.5em}.katex .fontsize-ensurer.reset-size7.size3,.katex .sizing.reset-size7.size3{font-size:.58333333em}.katex .fontsize-ensurer.reset-size7.size4,.katex .sizing.reset-size7.size4{font-size:.66666667em}.katex .fontsize-ensurer.reset-size7.size5,.katex .sizing.reset-size7.size5{font-size:.75em}.katex .fontsize-ensurer.reset-size7.size6,.katex .sizing.reset-size7.size6{font-size:.83333333em}.katex .fontsize-ensurer.reset-size7.size7,.katex .sizing.reset-size7.size7{font-size:1em}.katex .fontsize-ensurer.reset-size7.size8,.katex .sizing.reset-size7.size8{font-size:1.2em}.katex .fontsize-ensurer.reset-size7.size9,.katex .sizing.reset-size7.size9{font-size:1.44em}.katex .fontsize-ensurer.reset-size7.size10,.katex .sizing.reset-size7.size10{font-size:1.72833333em}.katex .fontsize-ensurer.reset-size7.size11,.katex .sizing.reset-size7.size11{font-size:2.07333333em}.katex .fontsize-ensurer.reset-size8.size1,.katex .sizing.reset-size8.size1{font-size:.34722222em}.katex .fontsize-ensurer.reset-size8.size2,.katex .sizing.reset-size8.size2{font-size:.41666667em}.katex .fontsize-ensurer.reset-size8.size3,.katex .sizing.reset-size8.size3{font-size:.48611111em}.katex .fontsize-ensurer.reset-size8.size4,.katex .sizing.reset-size8.size4{font-size:.55555556em}.katex .fontsize-ensurer.reset-size8.size5,.katex .sizing.reset-size8.size5{font-size:.625em}.katex .fontsize-ensurer.reset-size8.size6,.katex .sizing.reset-size8.size6{font-size:.69444444em}.katex .fontsize-ensurer.reset-size8.size7,.katex .sizing.reset-size8.size7{font-size:.83333333em}.katex .fontsize-ensurer.reset-size8.size8,.katex .sizing.reset-size8.size8{font-size:1em}.katex .fontsize-ensurer.reset-size8.size9,.katex .sizing.reset-size8.size9{font-size:1.2em}.katex .fontsize-ensurer.reset-size8.size10,.katex .sizing.reset-size8.size10{font-size:1.44027778em}.katex .fontsize-ensurer.reset-size8.size11,.katex .sizing.reset-size8.size11{font-size:1.72777778em}.katex .fontsize-ensurer.reset-size9.size1,.katex .sizing.reset-size9.size1{font-size:.28935185em}.katex .fontsize-ensurer.reset-size9.size2,.katex .sizing.reset-size9.size2{font-size:.34722222em}.katex .fontsize-ensurer.reset-size9.size3,.katex .sizing.reset-size9.size3{font-size:.40509259em}.katex .fontsize-ensurer.reset-size9.size4,.katex .sizing.reset-size9.size4{font-size:.46296296em}.katex .fontsize-ensurer.reset-size9.size5,.katex .sizing.reset-size9.size5{font-size:.52083333em}.katex .fontsize-ensurer.reset-size9.size6,.katex .sizing.reset-size9.size6{font-size:.5787037em}.katex .fontsize-ensurer.reset-size9.size7,.katex .sizing.reset-size9.size7{font-size:.69444444em}.katex .fontsize-ensurer.reset-size9.size8,.katex .sizing.reset-size9.size8{font-size:.83333333em}.katex .fontsize-ensurer.reset-size9.size9,.katex .sizing.reset-size9.size9{font-size:1em}.katex .fontsize-ensurer.reset-size9.size10,.katex .sizing.reset-size9.size10{font-size:1.20023148em}.katex .fontsize-ensurer.reset-size9.size11,.katex .sizing.reset-size9.size11{font-size:1.43981481em}.katex .fontsize-ensurer.reset-size10.size1,.katex .sizing.reset-size10.size1{font-size:.24108004em}.katex .fontsize-ensurer.reset-size10.size2,.katex .sizing.reset-size10.size2{font-size:.28929605em}.katex .fontsize-ensurer.reset-size10.size3,.katex .sizing.reset-size10.size3{font-size:.33751205em}.katex .fontsize-ensurer.reset-size10.size4,.katex .sizing.reset-size10.size4{font-size:.38572806em}.katex .fontsize-ensurer.reset-size10.size5,.katex .sizing.reset-size10.size5{font-size:.43394407em}.katex .fontsize-ensurer.reset-size10.size6,.katex .sizing.reset-size10.size6{font-size:.48216008em}.katex .fontsize-ensurer.reset-size10.size7,.katex .sizing.reset-size10.size7{font-size:.57859209em}.katex .fontsize-ensurer.reset-size10.size8,.katex .sizing.reset-size10.size8{font-size:.69431051em}.katex .fontsize-ensurer.reset-size10.size9,.katex .sizing.reset-size10.size9{font-size:.83317261em}.katex .fontsize-ensurer.reset-size10.size10,.katex .sizing.reset-size10.size10{font-size:1em}.katex .fontsize-ensurer.reset-size10.size11,.katex .sizing.reset-size10.size11{font-size:1.19961427em}.katex .fontsize-ensurer.reset-size11.size1,.katex .sizing.reset-size11.size1{font-size:.20096463em}.katex .fontsize-ensurer.reset-size11.size2,.katex .sizing.reset-size11.size2{font-size:.24115756em}.katex .fontsize-ensurer.reset-size11.size3,.katex .sizing.reset-size11.size3{font-size:.28135048em}.katex .fontsize-ensurer.reset-size11.size4,.katex .sizing.reset-size11.size4{font-size:.32154341em}.katex .fontsize-ensurer.reset-size11.size5,.katex .sizing.reset-size11.size5{font-size:.36173633em}.katex .fontsize-ensurer.reset-size11.size6,.katex .sizing.reset-size11.size6{font-size:.40192926em}.katex .fontsize-ensurer.reset-size11.size7,.katex .sizing.reset-size11.size7{font-size:.48231511em}.katex .fontsize-ensurer.reset-size11.size8,.katex .sizing.reset-size11.size8{font-size:.57877814em}.katex .fontsize-ensurer.reset-size11.size9,.katex .sizing.reset-size11.size9{font-size:.69453376em}.katex .fontsize-ensurer.reset-size11.size10,.katex .sizing.reset-size11.size10{font-size:.83360129em}.katex .fontsize-ensurer.reset-size11.size11,.katex .sizing.reset-size11.size11{font-size:1em}.katex .delimsizing.size1{font-family:KaTeX_Size1}.katex .delimsizing.size2{font-family:KaTeX_Size2}.katex .delimsizing.size3{font-family:KaTeX_Size3}.katex .delimsizing.size4{font-family:KaTeX_Size4}.katex .delimsizing.mult .delim-size1>span{font-family:KaTeX_Size1}.katex .delimsizing.mult .delim-size4>span{font-family:KaTeX_Size4}.katex .nulldelimiter{display:inline-block;width:.12em}.katex .delimcenter,.katex .op-symbol{position:relative}.katex .op-symbol.small-op{font-family:KaTeX_Size1}.katex .op-symbol.large-op{font-family:KaTeX_Size2}.katex .accent>.vlist-t,.katex .op-limits>.vlist-t{text-align:center}.katex .accent .accent-body{position:relative}.katex .accent .accent-body:not(.accent-full){width:0}.katex .overlay{display:block}.katex .mtable .vertical-separator{display:inline-block;min-width:1px}.katex .mtable .arraycolsep{display:inline-block}.katex .mtable .col-align-c>.vlist-t{text-align:center}.katex .mtable .col-align-l>.vlist-t{text-align:left}.katex .mtable .col-align-r>.vlist-t{text-align:right}.katex .svg-align{text-align:left}.katex svg{fill:currentColor;stroke:currentColor;fill-rule:nonzero;fill-opacity:1;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;display:block;height:inherit;position:absolute;width:100%}.katex svg path{stroke:none}.katex img{border-style:none;max-height:none;max-width:none;min-height:0;min-width:0}.katex .stretchy{display:block;overflow:hidden;position:relative;width:100%}.katex .stretchy:after,.katex .stretchy:before{content:""}.katex .hide-tail{overflow:hidden;position:relative;width:100%}.katex .halfarrow-left{left:0;overflow:hidden;position:absolute;width:50.2%}.katex .halfarrow-right{overflow:hidden;position:absolute;right:0;width:50.2%}.katex .brace-left{left:0;overflow:hidden;position:absolute;width:25.1%}.katex .brace-center{left:25%;overflow:hidden;position:absolute;width:50%}.katex .brace-right{overflow:hidden;position:absolute;right:0;width:25.1%}.katex .x-arrow-pad{padding:0 .5em}.katex .cd-arrow-pad{padding:0 .55556em 0 .27778em}.katex .mover,.katex .munder,.katex .x-arrow{text-align:center}.katex .boxpad{padding:0 .3em}.katex .fbox,.katex .fcolorbox{border:.04em solid;box-sizing:border-box}.katex .cancel-pad{padding:0 .2em}.katex .cancel-lap{margin-left:-.2em;margin-right:-.2em}.katex .sout{border-bottom-style:solid;border-bottom-width:.08em}.katex .angl{border-right:.049em solid;border-top:.049em solid;box-sizing:border-box;margin-right:.03889em}.katex .anglpad{padding:0 .03889em}.katex .eqn-num:before{content:"(" counter(katexEqnNo) ")";counter-increment:katexEqnNo}.katex .mml-eqn-num:before{content:"(" counter(mmlEqnNo) ")";counter-increment:mmlEqnNo}.katex .mtr-glue{width:50%}.katex .cd-vert-arrow{display:inline-block;position:relative}.katex .cd-label-left{display:inline-block;position:absolute;right:calc(50% + .3em);text-align:left}.katex .cd-label-right{display:inline-block;left:calc(50% + .3em);position:absolute;text-align:right}.katex-display{display:block;margin:1em 0;text-align:center}.katex-display>.katex{display:block;text-align:center;white-space:nowrap}.katex-display>.katex>.katex-html{display:block;position:relative}.katex-display>.katex>.katex-html>.tag{position:absolute;right:0}.katex-display.leqno>.katex>.katex-html>.tag{left:0;right:auto}.katex-display.fleqn>.katex{padding-left:2em;text-align:left}body{counter-reset:katexEqnNo mmlEqnNo}
+
+/*---------------------------------------------------------------------------------------------
+ *  Copyright (c) Microsoft Corporation. All rights reserved.
+ *  Licensed under the MIT License. See License.txt in the project root for license information.
+ *--------------------------------------------------------------------------------------------*/
+
+.katex-error {
+	color: var(--vscode-editorError-foreground);
+}
+
+</style>
+        
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Microsoft/vscode/extensions/markdown-language-features/media/markdown.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Microsoft/vscode/extensions/markdown-language-features/media/highlight.css">
+<style>
+            body {
+                font-family: -apple-system, BlinkMacSystemFont, 'Segoe WPC', 'Segoe UI', system-ui, 'Ubuntu', 'Droid Sans', sans-serif;
+                font-size: 14px;
+                line-height: 1.6;
+            }
+        </style>
+        <style>
+.task-list-item { list-style-type: none; } .task-list-item-checkbox { margin-left: -20px; vertical-align: middle; }
+</style>
+        
+    </head>
+    <body class="vscode-body vscode-light">
+        <ul>
+<li><a href="#1-npcs">1. NPCs</a>
+<ul>
+<li><a href="#11-yargoth-anchorite-of-talos">1.1. Yargoth, Anchorite of Talos</a></li>
+</ul>
+</li>
+<li><a href="#2-quest-goal">2. Quest Goal</a></li>
+<li><a href="#3-preparations">3. Preparations</a>
+<ul>
+<li><a href="#31-barthens-farewell">3.1. Barthen's farewell</a></li>
+</ul>
+</li>
+<li><a href="#4-travel-to-the-camp">4. Travel to the camp</a>
+<ul>
+<li><a href="#41-first-day">4.1. First Day</a>
+<ul>
+<li><a href="#411-entering-the-forest%D0%B0-boar-ing-encounter">4.1.1. Entering the forest(А Boar-ing encounter)</a>
+<ul>
+<li><a href="#4111-chasing-the-boar">4.1.1.1. <strong>Chasing the boar</strong></a></li>
+<li><a href="#4112-4112-traversing-the-forest">4.1.1.2. <strong>4.1.1.2. Traversing the forest</strong></a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#5-tables">5. <strong>Tables</strong></a>
+<ul>
+<li><a href="#51-combat">5.1 <strong>Combat</strong></a></li>
+<li><a href="#52-environment">5.2 <strong>Environment</strong></a></li>
+</ul>
+</li>
+</ul>
+<h1 id="1-npcs">1. NPCs</h1>
+<ul>
+<li>Bad guys
+<h2 id="11-yargoth-anchorite-of-talos">1.1. Yargoth, Anchorite of Talos</h2>
+Tова е глиганът който виждат в началото на гората. Яргот е скаут, който гледа за новодошли в гората и ако го преследват прави всичко възможно да избяга, за да може да информира Гранок.</li>
+</ul>
+<h1 id="2-quest-goal">2. Quest Goal</h1>
+<p>Целта на куеста е да се доставят провизии до лагера на дървосекачите, който се намира в Neverwinter Woods на 2 дни път от Фандалин.
+Тибор Уестър трябва да подпише доставката за тях, за да се счита куеста за завършен</p>
+<h1 id="3-preparations">3. Preparations</h1>
+<p>Героите трябва да вземат доставката от Бартен преди да тръгнат. Харбин вече е подготвил нещата.</p>
+<h2 id="31-barthens-farewell">3.1. Barthen's farewell</h2>
+<pre><code> Като отивате зад провизиите на Бартен, виждате че на каруцата са натоварени контейнери а пред нея е впрегнат един бивол.
+ - Поръчката е изпълнена и натоварена. - протяга ръка и ви подава разписка с нещата коите се съдържат в контейнерите
+ - Биволът се казва Винсент и очаквам да го върнете заедно с каруцата и моля ви се внимавайте. Чувал слухове, че единственото
+   безопастно място останало в гората е хижата на Фалкон. Ако смятате да се отбиете при него, знам че ако му занесете бутилка
+   хубаво вино той ще ви нагости и приюти за вечерта.
+</code></pre>
+<h1 id="4-travel-to-the-camp">4. Travel to the camp</h1>
+<p>Лагерът се намира на 50 мили от Фандалин. Дори и ако вземат конете най-бързото темпо, с което могат да се движат, е 24 мили на ден
+заради каруцата и биволът.</p>
+<h2 id="41-first-day">4.1. First Day</h2>
+<pre><code>През първият ден стигат до ръбът на гората, където намират лагерно място. Нощта е спокойна, но ако играчите искат да направят Percep-
+tion check усещат че биват наблюдавани.
+</code></pre>
+<h3 id="411-entering-the-forestа-boar-ing-encounter">4.1.1. Entering the forest(А Boar-ing encounter)</h3>
+<pre><code>Около час след като навлизат в гората, забелязват диво прасе, което стои на около 20тина метра от тях(60-70ft), и ги гледа подозрително.
+</code></pre>
+<h4 id="4111-chasing-the-boar">4.1.1.1. <strong>Chasing the boar</strong></h4>
+<p>Ако героите тръгнат към глиганът или се опитат да го атакуват по някакъв начин тръгва да бяга. Следва <strong>Chase Scene</strong> през който Yargoth се опитва да избяга на изток.</p>
+<p><strong>Chase Scene</strong></p>
+<pre><code>- Rules
+  - Всеки играч трябва да избере умение, в което е добър или мисли че е уместно за ситуацията
+  - Играчът трябва да успее на DC 15 check
+- Win condition
+  - Когато играч събере 3 успеха настига Анкоритът на Талос и може да се опита да направи нещо
+- Lose condition
+  - Когато играч събере 3 неуспеха излиза от състезанието
+- Joining a battle with the query
+  - Ако някой успее да настигне целта и да се сбие с нея, изостанал играч се присъединява след брой рундове равен на броя провалени тестове
+- Ending the chase
+  - Преследването свършва когато всички играчи съберат по 3 неуспеха, някой настигне жертвата или играчите са изкарали 8 рунда в преследването
+    на жертвата
+- Springing the trap
+  - Засадата се състои от 1x Duskthorn Dryad, 2x Vine Blight, 3x Child of the Briar
+</code></pre>
+<h4 id="4112-4112-traversing-the-forest">4.1.1.2. <strong>4.1.1.2. Traversing the forest</strong></h4>
+<p>Придвижването из гората става с <strong>Exploration Skill Check</strong>, която прави човекът който е избран като гид в гората. Гидът може да бъде сменен по всяко време, но това не намаля трудността на предизвикателството.</p>
+<p><strong>Exploration Skill Check</strong></p>
+<pre><code>- Skills to use
+  - Investigation, Nature, Perception and Survival
+  - DC -&gt; 13 to 15
+- Success
+  - играчите продължават в първоначалната посока, която са избрали
+- Failure
+  - водачът хвърля 1d8, за да се определи в коя посока се е отклонило партито. 1 на d8 e посоката север и посоките продължават по часовниковата стрелка.Отклонението е винаги 1 поле.
+  - трудността на навигация се увеличава с 1 до максимум 15
+  - след това DM-a хвърля 1d20. На четно число се хвърля на Combat Encounter Table или Environment Hazards Table
+</code></pre>
+<h1 id="5-tables">5. <strong>Tables</strong></h1>
+<h2 id="51-combat">5.1 <strong>Combat</strong></h2>
+<p><strong>Combat Encounters Table(Day)</strong></p>
+<p>Encounter notes:</p>
+<pre><code>1. Ghostwalk Spider
+   - Description
+     Докато вървите из гората виждате как гората започва да се сгъстява и все по малко светлина прониква през короните на дърветата. Не е достатъчно тъмно, за да ви трябва Darkvision, но е достатъчно осезаемо за да се усети. Нещо друго което забелязвате е че вече не се чуват никакви звуци от животни, птички и други обитатели на гората. Какво правите?
+      - Spider Description
+        - Пред вас виждате тънко, измършаляво същество което е два метра и половина в диаметър и почти лишено от цвят.
+   - Information
+     - След като навлезнат малко по навътре в тъмната част от гората успешен DC 15 Perception или Investigation check, разкрива че около и по дърветата има ефимерна, почти прозрачни паяжини. Ако checka е 20+ след малко търсене откриват останки на хуманоид.
+     - С успешен DC 15 Investigation, Arcana или Nature check играчите разкриват че това най вероятно е пещерата на голям паяк и най вероятно е наясно че има хора, които ходят по мрежата му. Ако check-a е близко или 20+ се сеща че единственият паяк който са виждали с такава е паяжина е Phase Spider
+       - Phase Spider е голям като кон бледосин паяк, който притежава магическата способност влиза и излиза от Ethereal Plane, което го прави да изглежда все едно че може да се телепортира.
+   - Ghostwalk Spider actions
+     - В моментът в който играчите влезнат в леговището му знае къде точно са героите.
+     - Паякът атакува след 1d4 + 1 рунда или ако играчите тръгнат да бягат/излизат от територията на паяка
+     - Стои скрит в паяжината си и дебне, докато играчите не изберат да си тръгнат или като изтече таймерът
+   - Possible resolutions
+     - Avoiding combat
+       - Избягването на битка тук е трудно, защото паякът ги дебне през цялото време
+       - Играчите се считат за избягали ако всички излезнат от картата на която се води битката
+     - Fighting the spider
+       - Паякът изпозлва Ghostwalk в началото на битката и избира мишена произволно(1d6)
+       - По време на битката е позволено на играчите да използват Search като бонус действие, за да локират паякът
+2. Amphiptere
+    - Description
+      - Докато вървите из гората чувате как нормалните звуците които идват от гората(песни на птички, звуци от зверове) започват да се засилват. Продължавате да вървите и навлизате в част от гората, където забелязвате че е доста по гъста и вече не се чуват толкова силно звуците от гората. Изведнъж от короните на близките дървета изкачат 3 средни на големина същества, които приличат на прилепи само че имат люспести влечугоподбни тела и опашка на чийто край забелязвате че има жило като на скорпион, а крилата им са украсени с зеленикаво-жълти пера.
+    - Combat with an Amphiptere flock
+      - В битка Amphiptere атакуват тези които не могат да ги стигнат или този който ги нападне с range оръжие
+      - Фокусират различни мишени докато някой не бъде отровен. Когато това стане, Amphiptere пронизителен звук и всички се събират около жертвата пострадала от отровата. Ако има повече от две такива се всеки Amphiptere избира произволно
+      - Никога не се бият до края. В момента в който някой от ятото е тежко ранен то отстъпва и започва да дебне партито от високо
+        - Amphiptere ятото следва партито в продължение на 1d4 + 1 часа или докато не се стъмни.
+        - Играч може да различи къде се крие ятото при успешен DC 20 Perception или Investigation check
+3. Children of the Briar(CotB) and Dragonfly mounts
+    - Description
+      - Вървейки из гората чувате как от короните на дърветата почват да се разнасят цъкащи и дрънкащи звуци. Изведнъж виждате как от върха на гората се спускат огромни водни кончета върху които виждате малки същества, които изглеждат като тръни на които им е придадена хуманоидна форма.
+    - Combat
+      - CotB започват битката с Spitdart Tongue и го използват докато могат. След това слизат и правят няколко Claw атаки преди да си тръгнат
+      - Целта на атаката им е да дразнят и да ранят играчите. В момента в който CotB умре, всички без маунта му тръгват да бягат.ю
+    - Combat Aftermath
+      - CotB са скаути за сбора на вещици и техният Vine Lord.
+      - След като се оттеглят от битката продължават да следят героите.
+      - При успешен DC 20 Perception или Investigation check героите могат да различат CotB в короните на дърветата и да ги атакуват
+      - Винаги има 33% шанс да атакуват героите на всяко събитие докато CotB са повече от 1
+4. Tendril Puppets
+      - Description
+        - Докато вървите из гората от дърветата пред вас виждате как залп от шипове лети към вас.
+      - Combat
+        - TP винаги се бият до край
+      - Combat Aftermath
+        - Труповете на TP почват да се разлагат и след минута от тях е останало само едно малко съсухрено семе. Семето може да бъде изследвано от друид или рейнджър чрез Druidcraft или spellcasting check. При успешен DC 17 check героят знае че това е семе посято от Vine Lord.
+        - Играчите могат да изследват труповете на TP. При успешен DC 20 Investigation, Nature или Arcana check
+          - Знаеш, от истории които си чувал от твоя учител, за такива същества и че не са естествени и знанията как се правят такива същества не е лесно достъпно извън рейнджърски или друидски гилдии/кръгове, които знаят за опастността от феи или други същества от Feywilds. Също така знаеш, че Vine Lord, един път създаден, винаги търси начини да разшири владението си.
+7. Flail Snail Trail
+   - Description 
+     // Попитай какво правят докато вървят
+     // Поискай DC 12 Investigation, Survival или Perception check от тези които не говорят
+     - Докато вървите из гората умислени забелязвате нещо странно. По земята под вас не усещате никакви камъчета, клони, листа, отломки като цяло от какъвто и да е вид. Поглеждате на долу и виждате блестяща, почти невидима диря, която продължава в страни от пътя ви. 
+       - Факти за следата (Investigation/Survival)
+         - 8-10 -&gt; Не знаеш нищо
+         - 11-16 -&gt; знаеш че тази диря ще ви отведе до съществото
+         - 17+ -&gt; това е следа оставена от Flail Snail
+   - Flail Snail Facts (Arcana/Nature):
+     - 1-9 -&gt; не знаеш нищо
+     - 10-13 -&gt; това е Flail Snail
+     - 14-16 -&gt; дирята оставена от Flain Snail е доста ценна само по себе си и има множество употреби
+     - 17-20 -&gt; знаеш че оставената диря може да се събере и от нея се правят прозорци и всякакви стъклени неща; също така черупката на Flail Snail струва около 5000 злато
+     - 21+ -&gt; знаеш че от черупката на Flail Snail могат да се направят 3 щита.
+8. Spider den 
+   - Description
+     - Вървейки напред в гората виждате как короната на дърветата почва да се сгъстява и става по мрачно то колкото е.  
+</code></pre>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">Roll 1d10</th>
+<th style="text-align:left">Monsters</th>
+<th style="text-align:left">Used</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">1</td>
+<td style="text-align:left">1x Ghostwalk Spider(Tome of Beasts p.361)</td>
+<td style="text-align:left"><input type="radio"/></td>
+</tr>
+<tr>
+<td style="text-align:left">2</td>
+<td style="text-align:left">4x Amphiptere</td>
+<td style="text-align:left"><input type="radio"/></td>
+</tr>
+<tr>
+<td style="text-align:left">3</td>
+<td style="text-align:left">3x Child of the Briar; 3x giant dragonfly</td>
+<td style="text-align:left"><input type="radio"/></td>
+</tr>
+<tr>
+<td style="text-align:left">4-6</td>
+<td style="text-align:left">1d4 + 1 Tendril Puppets</td>
+<td style="text-align:left"><input type="radio"/></td>
+</tr>
+<tr>
+<td style="text-align:left">7</td>
+<td style="text-align:left">1x Flail Snail</td>
+<td style="text-align:left"><input type="radio"/></td>
+</tr>
+<tr>
+<td style="text-align:left">8</td>
+<td style="text-align:left">Spiderling's Den (Ettercap, Fofi Spider, Phase Spider)</td>
+<td style="text-align:left"><input type="radio"/></td>
+</tr>
+<tr>
+<td style="text-align:left">9</td>
+<td style="text-align:left">2x Troll</td>
+<td style="text-align:left"><input type="radio"/></td>
+</tr>
+<tr>
+<td style="text-align:left">10</td>
+<td style="text-align:left">1x Savager</td>
+<td style="text-align:left"><input type="radio"/></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Combat Encounters Table(Night)</strong></p>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">Roll 1d8</th>
+<th style="text-align:left">Monsters</th>
+<th style="text-align:left">Used</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">1</td>
+<td style="text-align:left">1d8 + 2 Stirges</td>
+<td style="text-align:left"><input type="radio"/></td>
+</tr>
+<tr>
+<td style="text-align:left">2</td>
+<td style="text-align:left">1 Winter Wolf, 1 Dire Wolf and 1d4 + 2 Wolves</td>
+<td style="text-align:left"><input type="radio"/></td>
+</tr>
+<tr>
+<td style="text-align:left">3</td>
+<td style="text-align:left">1 Ghast, 1d6 - 1 Ghouls</td>
+<td style="text-align:left"><input type="radio"/></td>
+</tr>
+<tr>
+<td style="text-align:left">4-6</td>
+<td style="text-align:left">1d4 + 1 Tendril Puppets</td>
+<td style="text-align:left"><input type="radio"/></td>
+</tr>
+<tr>
+<td style="text-align:left">7</td>
+<td style="text-align:left">1d4 - 1(min 1) Owlbears</td>
+<td style="text-align:left"><input type="radio"/></td>
+</tr>
+<tr>
+<td style="text-align:left">8</td>
+<td style="text-align:left">1 Leshy</td>
+<td style="text-align:left"><input type="radio"/></td>
+</tr>
+</tbody>
+</table>
+<h2 id="52-environment">5.2 <strong>Environment</strong></h2>
+<p><strong>Environment Hazards Table</strong></p>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">Roll 1d12</th>
+<th style="text-align:left">Hazard</th>
+<th style="text-align:left">Used</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">1</td>
+<td style="text-align:left">An area of mud and quicksand (DMG p.110) might include Treacle(Tome of Beasts p.388)</td>
+<td style="text-align:left"><input type="radio"/></td>
+</tr>
+<tr>
+<td style="text-align:left">2</td>
+<td style="text-align:left">The animals and birds have all gone quiet</td>
+<td style="text-align:left"><input type="radio"/></td>
+</tr>
+<tr>
+<td style="text-align:left">3</td>
+<td style="text-align:left">An area of razorvine (DMG pg 110)</td>
+<td style="text-align:left"><input type="radio"/></td>
+</tr>
+<tr>
+<td style="text-align:left">4</td>
+<td style="text-align:left">Players arrive at a forest clearing (DMG pg 110) full of mushrooms of various colors</td>
+<td style="text-align:left"><input type="radio"/></td>
+</tr>
+<tr>
+<td style="text-align:left">5</td>
+<td style="text-align:left">Players get spotted by the Tendril Puppets of the Vine Lord</td>
+<td style="text-align:left"><input type="radio"/></td>
+</tr>
+<tr>
+<td style="text-align:left">6</td>
+<td style="text-align:left">Players hear loud sounds coming from above them high in forest grove</td>
+<td style="text-align:left"><input type="radio"/></td>
+</tr>
+<tr>
+<td style="text-align:left">7</td>
+<td style="text-align:left">Players find beasts infected with the Vine Lord's disease</td>
+<td style="text-align:left"><input type="radio"/></td>
+</tr>
+<tr>
+<td style="text-align:left">8</td>
+<td style="text-align:left">Players find Prismatic Beatle Swarm(Tome of Beasts p.376)</td>
+<td style="text-align:left"><input type="radio"/></td>
+</tr>
+<tr>
+<td style="text-align:left">9</td>
+<td style="text-align:left">Players find a valley with helpful herbs and prankster Boggle(Volo's Guide p.129)</td>
+<td style="text-align:left"><input type="radio"/></td>
+</tr>
+<tr>
+<td style="text-align:left">10</td>
+<td style="text-align:left">Harmless but noisy beasts alarmed by party. Attract attention of other creatures if nothing done</td>
+<td style="text-align:left"><input type="radio"/></td>
+</tr>
+<tr>
+<td style="text-align:left">11</td>
+<td style="text-align:left">A stampede of wild herd beasts</td>
+<td style="text-align:left"><input type="radio"/></td>
+</tr>
+<tr>
+<td style="text-align:left">12</td>
+<td style="text-align:left">Large amounts of harmless insects. Disturbing causes light or heavy obscurement.</td>
+<td style="text-align:left"><input type="radio"/></td>
+</tr>
+</tbody>
+</table>
+
+        
+        
+    </body>
+    </html>
